@@ -1,0 +1,12 @@
+.cmp-3__wrapper {
+    margin: .5em;
+    border: 1px dashed blue;
+    padding: .5em;
+}
+
+.cmp-3__actions {
+    display: flex;
+    & > * {
+        margin: 0 .5em;
+    }
+}

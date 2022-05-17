@@ -1,0 +1,24 @@
+@use '~@angular/material' as mat;
+@import 'angular-sandbox-theme';
+@include mat.core();
+@include mat.all-component-themes($angular-sandbox-theme);
+
+$color-config: mat.get-color-config($angular-sandbox-theme);
+
+.action-info {
+  max-height: 300px;
+  max-width: 350px;
+  overflow: auto;
+}
+
+.action-success {
+  background: #83e197;
+}
+
+.action-error {
+  background: map-get($color-config, 'warn', 300);
+}
+
+.action-warning {
+  background: map-get($color-config, 'warn', 100);
+}

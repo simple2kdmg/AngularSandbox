@@ -1,0 +1,9 @@
+.kpite__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  flex-grow: 1;
+}

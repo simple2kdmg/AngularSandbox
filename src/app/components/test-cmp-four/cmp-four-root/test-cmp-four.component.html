@@ -1,0 +1,18 @@
+<div class="cmp-4__wrapper">
+    <input class="test-input">
+
+    <button #testButton>Test From Event</button>
+
+    <!-- <div class="cmp-4__actions">
+        <button mat-raised-button (click)="testInfoPopUp()">Test Info</button>
+        <button mat-raised-button (click)="testSuccessPopUp()">Test Success</button>
+        <button mat-raised-button (click)="testWarningPopUp()">Test Warning</button>
+        <button mat-raised-button (click)="testErrorPopUp()">Test Error</button>
+        <button mat-raised-button (click)="loadTestOfPopUp()">Load Test</button>
+        <button mat-raised-button (click)="toggleChild()">Toggle child</button>
+    </div> -->
+
+    <div *ngIf="childVisible">
+        <test-cmp-four-child [parameter]="parentParameter"></test-cmp-four-child>
+    </div>
+</div>

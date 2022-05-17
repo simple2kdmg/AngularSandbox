@@ -1,0 +1,33 @@
+@import "variables";
+
+.nav__wrapper {
+  display: flex;
+  height: 3em;
+  padding: .5em 1em;
+  background-color: $navbar-background;
+  box-shadow: 0 0 16px 0 #656565;
+}
+
+.nav__link {
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: .25em;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: whitesmoke;
+  border-bottom-color: whitesmoke;
+  opacity: .9;
+  transition: .3s;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.active {
+  border-bottom: 3px solid white;
+}

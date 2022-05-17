@@ -1,0 +1,46 @@
+<div class="cmp-one__wrapper">
+    <section class="cmp-one__title">
+        Component 1
+    </section>
+    
+    <section class="cmp-one__content">
+        <cdk-virtual-scroll-viewport itemSize="10">
+            <table>
+                <thead>
+                    <tr [style.top]="getHeadOffset">
+                        <th class="head-cell sticky-left">Id</th>
+                        <th class="head-cell">ParentId</th>
+                        <th class="head-cell">Data</th>
+                        <th class="head-cell">Data</th>
+                        <th class="head-cell">Data</th>
+                        <th class="head-cell">Data</th>
+                        <th class="head-cell">Data</th>
+                        <th class="head-cell">Data</th>
+                    </tr>
+                </thead>
+            
+                <tbody> 
+                    <ng-container *cdkVirtualFor="let node of flatHierarchy; trackBy: trackByState">
+                        <tr>
+                            <td class="sticky-left">
+                                <div class="cell-with-toggle" [style.paddingLeft.em]="node.level - 1">
+                                    <mat-icon class="toggle-button" *ngIf="node.expandable" (click)="onNodeClick(node)" >
+                                        {{ node.isExpanded ? 'keyboard_arrow_down' : 'keyboard_arrow_right' }}
+                                    </mat-icon>
+                                    <span [style.paddingLeft.px]="node.expandable ? 0 : 18">{{ node.id }}</span>
+                                </div>
+                            </td>
+                            <td>{{ node.parentId }}</td>
+                            <td>{{ node.data }}</td>
+                            <td>{{ node.data }}</td>
+                            <td>{{ node.data }}</td>
+                            <td>{{ node.data }}</td>
+                            <td>{{ node.data }}</td>
+                            <td>{{ node.data }}</td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </cdk-virtual-scroll-viewport>
+    </section>
+</div>

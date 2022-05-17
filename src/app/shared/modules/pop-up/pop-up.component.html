@@ -1,0 +1,25 @@
+<div class="pop-up__wrapper">
+  <div *ngFor="let message of messages"
+       class="pop-up__message-wrapper"
+       [ngStyle]="{ 'animation': message.animation }"
+       [class.info]="message.type === popUpType.Info"
+       [class.success]="message.type === popUpType.Success"
+       [class.warning]="message.type === popUpType.Warning"
+       [class.error]="message.type === popUpType.Error">
+    <div class="pop-up__message-text">{{ message.text }}</div>
+    <div [ngSwitch]="message.type" class="pop-up__message-icon">
+      <ng-template [ngSwitchCase]="popUpType.Info">
+        <mat-icon>error_outline</mat-icon>
+      </ng-template>
+      <ng-template [ngSwitchCase]="popUpType.Success">
+        <mat-icon>check_circle_outline</mat-icon>
+      </ng-template>
+      <ng-template [ngSwitchCase]="popUpType.Warning">
+        <mat-icon>warning</mat-icon>
+      </ng-template>
+      <ng-template [ngSwitchCase]="popUpType.Error">
+        <mat-icon>error</mat-icon>
+      </ng-template>
+    </div>
+  </div>
+</div>

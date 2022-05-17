@@ -1,0 +1,20 @@
+@use '~@angular/material' as mat;
+@import '~@angular/material/theming';
+@import 'palettes';
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$angular-sandbox-primary: mat.define-palette($angular-sandbox-primary);
+$angular-sandbox-accent: mat.define-palette($angular-sandbox-accent);
+$angular-sandbox-warn: mat.define-palette($angular-sandbox-warn);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$angular-sandbox-theme: mat.define-light-theme((
+  color: (
+    primary: $angular-sandbox-primary,
+    accent: $angular-sandbox-accent,
+    warn: $angular-sandbox-warn
+  )
+));

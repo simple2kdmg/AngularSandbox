@@ -1,0 +1,56 @@
+.cmp-one__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cmp-one__title {
+    color: green;
+    font-weight: bold;
+    padding: .5em;
+}
+
+.cmp-one__content {
+    flex-grow: 1;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+th, td {
+    padding: 0 1em;
+}
+
+.head-cell {
+    background-color: #eaeced;
+    position: sticky;
+    z-index: 2;
+    top: inherit;
+}
+
+.cell-with-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-button {
+    cursor: pointer;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+cdk-virtual-scroll-viewport {
+    height: 100%;
+    width: 100%;
+    border: 1px solid;
+}
+
+.sticky-left {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+}

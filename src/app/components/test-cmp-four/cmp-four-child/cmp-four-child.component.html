@@ -1,0 +1,15 @@
+<div class="test-encapsulation">TEST encapsulation</div>
+
+<div style="border: 1px solid red; padding: .3em">
+    <div *ngFor="let obj of testObjects"
+         style="border: 1px solid black; padding: .3em; margin-bottom: .5em;"
+         [style.backgroundColor]="obj.isOk ? 'green' : ''">
+        {{ obj.id }}
+        <button (click)="onChangeObj(obj)">Toggle OK</button>
+        <!-- <span *ngIf="obj.isOk">OK</span> -->
+    </div>
+</div>
+<button (click)="testWorker()">Test worker</button>
+<div>
+    <input class="custom-input">
+</div>

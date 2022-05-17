@@ -1,0 +1,11 @@
+@use '~@angular/material' as mat;
+@import 'angular-sandbox-theme';
+
+$color-config: mat.get-color-config($angular-sandbox-theme);
+
+$primary: map-get($color-config, 'primary', 500);
+$accent: map-get($color-config, 'accent', 500);
+$warn: map-get($color-config, 'warn', 500);
+$warn-light: map-get($color-config, 'warn', 200);
+$loading-spinner-color: map-get($color-config, 'accent', 800);
+$navbar-background: map-get($color-config, 'primary', 700);

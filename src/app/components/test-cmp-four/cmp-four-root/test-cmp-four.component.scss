@@ -1,0 +1,24 @@
+.cmp-4__wrapper {
+    margin: .5em;
+    border: 1px dashed blue;
+    padding: .5em;
+}
+
+.cmp-4__actions {
+    display: flex;
+    & > * {
+        margin: 0 .5em;
+    }
+}
+
+.test-input {
+    border: 1px dashed green;
+}
+
+.custom-input {
+    background-color: red;
+}
+
+.test-encapsulation {
+    color: blue;
+}
